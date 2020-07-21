@@ -974,6 +974,12 @@ namespace Microsoft.EntityFrameworkCore.Diagnostics
         public static string SequenceContainsNoElements
             => GetString("SequenceContainsNoElements");
 
+        /// <summary>
+        ///     Projecting collection correlated with keyless entity is not supported.
+        /// </summary>
+        public static string ProjectingCollectionOnKeylessEntityNotSupported
+            => GetString("ProjectingCollectionOnKeylessEntityNotSupported");
+
         private static string GetString(string name, params string[] formatterNames)
         {
             var value = _resourceManager.GetString(name);
